@@ -1,0 +1,45 @@
+<div class="shell">
+  <div class="shell__border">
+    <div class="shell__border__screen">
+      <video
+        class="shell__border__screen__video"
+        src="https://utfs.io/f/uaa5rKCyOqvJck8Iz0aVb3RpvU9fBXCM7Tq1dkQhH5AYE0ty"
+        autoplay
+        loop
+        muted
+        preload="auto"
+      ></video>
+      <div class="shell__border__screen__content">
+        @if (pokemon) {
+        <div class="pokemon">
+          <div class="pokemon__details">
+            <p class="pokemon__details__name">{{ pokemon?.name }}</p>
+            <p class="pokemon__details__type">
+              {{ pokemon?.types[0]?.type?.name }}
+            </p>
+            <p class="pokemon__details__height">
+              Height: {{ pokemon?.height }}
+            </p>
+            <p class="pokemon__details__weight">
+              Weight: {{ pokemon?.weight }}
+            </p>
+          </div>
+          <div class="pokemon__stats">
+            <div class="pokemon__stats__list">
+              @for (stat of pokemon?.stats; track stat.stat.name) {
+              <div class="pokemon__stats__card">
+                <p class="pokemon__stats__name">{{ stat?.stat.name }}</p>
+                <p class="pokemon__stats__value">{{ stat.base_stat }}</p>
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+        } @else {
+        <h1>No pokemon</h1>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+

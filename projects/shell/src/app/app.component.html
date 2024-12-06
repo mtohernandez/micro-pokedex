@@ -1,0 +1,29 @@
+<main id="main">
+  <div class="shell">
+    <div class="shell__border">
+      <div class="shell__border__screen">
+        <video
+          class="shell__border__screen__video"
+          src="https://utfs.io/f/uaa5rKCyOqvJck8Iz0aVb3RpvU9fBXCM7Tq1dkQhH5AYE0ty"
+          autoplay
+          muted
+          loop
+          preload="auto"
+        ></video>
+        <div class="shell__border__screen__content">
+          @if (pokemon) {
+          <img
+            src="{{ pokemon.sprites.front_default }}"
+            height="200"
+            width="200"
+          />
+          } @else {
+          <h1>No pokemon</h1>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</main>
+

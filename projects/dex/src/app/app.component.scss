@@ -1,0 +1,33 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  background-color: #b0aeaf;
+  padding-left: 2.6rem;
+  padding-right: 2.6rem;
+}
+
+.controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex: 1;
+
+  &__button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid #121212;
+    transition: all .5 ease;
+
+    &:active {
+      background-color: gray;
+    }
+  }
+}
